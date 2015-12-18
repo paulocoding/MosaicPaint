@@ -35,7 +35,7 @@ a:hover {
 
 main {
 	display: block;
-	width: 240px;
+	width: 400px;
 	margin: 0 auto;
 }
 
@@ -56,15 +56,16 @@ main {
 }
 .my-mosaic {
 	clear: both;
-	width: 240px;
+	width: 400px;
 }
 
 .square {
-	display: block; 
+	display: block;
+	box-sizing: border-box;
 	float: left;
 	width: 20px; 
 	height: 20px; 
-	background-color: #66ee33;
-	border: 1px solid #222;
-	margin: 1px;	
+	background-color: #000;
+	border: 1px solid #444;
+	margin: 0;
 }

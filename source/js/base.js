@@ -1,11 +1,16 @@
 var main= function(){
-	var generateGrid = function(l){
-		l = l*l
-		for(var i=0;i<l;i++){
-			$('.my-mosaic').append(mySquare);
-		}
-	}
 	var mySquare = '<div class="square"></div>';
+	var generateGrid = function(l){
+		var totalWidth=400;
+		var squareWidth=(totalWidth/l)+'px';
+		l = l*l
+		$mosaic=$('.my-mosaic');
+		for(var i=0;i<l;i++){
+			$mosaic.append(mySquare);
+		}
+		$('.square').css('width',squareWidth);
+		$('.square').css('height', squareWidth);
+	}
 	var gridLength = 10;
 	
 	
