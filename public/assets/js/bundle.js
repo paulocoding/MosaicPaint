@@ -1,5 +1,6 @@
 var main= function(){
 	var mySquare = '<div class="square"></div>';
+	// generates a grid with l squares on each side
 	var generateGrid = function(l){
 		var totalWidth=400;
 		var squareWidth=(totalWidth/l)+'px';
@@ -11,11 +12,18 @@ var main= function(){
 		$('.square').css('width',squareWidth);
 		$('.square').css('height', squareWidth);
 	}
-	var gridLength = 10;
 	
+	// paints the square
+	var paintGrid = function(){
+		$(this).css('background-color', '#ddd');
+	};
+	
+	// setting grid length 
+	var gridLength = 20;
 	
 	generateGrid(gridLength);
-	
+	$('.square').mouseover(paintGrid);
+	// end of main function
 };
 
 $(document).ready(main);
