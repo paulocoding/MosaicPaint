@@ -1,8 +1,7 @@
 var main= function(){
 	var mySquare = '<div class="square"></div>';
 	// generates a grid with l squares on each side
-	var generateGrid = function(l){
-		var totalWidth=400;
+	var generateGrid = function(totalWidth, l){
 		var squareWidth=(totalWidth/l)+'px';
 		l = l*l
 		$mosaic=$('.my-mosaic');
@@ -19,9 +18,9 @@ var main= function(){
 	};
 	
 	// setting grid length 
-	var gridLength = 20;
+	var gridLength = 10;
 	
-	generateGrid(gridLength);
+	generateGrid(parseInt($('.my-mosaic').css('width')), gridLength);
 	$('.square').mouseover(paintGrid);
 	// end of main function
 };
