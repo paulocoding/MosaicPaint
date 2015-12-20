@@ -1,5 +1,5 @@
 body {
-  background-color: #fafafa;
+  background-color: #eee;
   color: #333;
   font-family: 'Lato', Sans-serif; }
 
@@ -34,19 +34,3 @@ main {
   display: block;
   width: 400px;
   margin: 0 auto; }
-
-.my-mosaic {
-  clear: both;
-  width: 400px; }
-
-.square {
-  display: block;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  float: left;
-  width: 20px;
-  height: 20px;
-  background-color: #000;
-  border: 1px solid #444;
-  margin: 0; }

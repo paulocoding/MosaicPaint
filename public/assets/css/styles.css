@@ -22,7 +22,7 @@
   line-height: 1.6em; }
 
 body {
-  background-color: #fafafa;
+  background-color: #eee;
   color: #333;
   font-family: 'Lato', Sans-serif; }
 
@@ -60,7 +60,8 @@ main {
 
 .my-mosaic {
   clear: both;
-  width: 400px; }
+  width: 400px;
+  padding-top: 10px; }
 
 .square {
   display: block;
@@ -73,3 +74,24 @@ main {
   background-color: #000;
   border: 1px solid #444;
   margin: 0; }
+
+.options {
+  margin-top: 20px; }
+  .options label {
+    display: block;
+    float: left;
+    padding: 5px; }
+  .options #square-range {
+    display: block;
+    float: left;
+    padding: 12px 5px 5px 5px; }
+  .options .square-number {
+    display: block;
+    float: left;
+    padding: 5px 5px 5px 10px;
+    width: 40px; }
+  .options .new-mosaic {
+    display: block;
+    float: right;
+    margin: 5px 0;
+    padding: 2px 6px; }

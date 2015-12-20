@@ -16,10 +16,10 @@ var main= function(){
 	
 	// paints the square
 	var paintGrid = function(){
-		$(this).css('background-color', '#ddd');
+		$(this).css('background-color', '#fff');
 	};
 	
-	// setting grid length 
+	// setting default grid length 
 	var gridLength = 10;
 	
 	$('#square-range').change(function(){
