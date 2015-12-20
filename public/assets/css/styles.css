@@ -95,3 +95,9 @@ main {
     float: right;
     margin: 5px 0;
     padding: 2px 6px; }
+
+.paint-options {
+  clear: both; }
+  .paint-options button {
+    padding: 2px 6px;
+    margin: 0 10px 0 0; }

@@ -14,6 +14,10 @@ var main= function(){
 		$('.square').css('height', squareWidth);
 	}
 	
+	//******************//
+	// paint functions:	//
+	//******************//
+	
 	// paints the square white
 	var paintGridWhite = function(){
 		$(this).css('background-color', '#fff');
@@ -37,7 +41,24 @@ var main= function(){
 		$(this).css('background-color', 'rgb('+red+', '+red+', '+red+')');
 	}
 	
-	var paintGrid = paintGridAdd;
+	var paintGrid = paintGridWhite;
+	
+	// buttons to change paint function:
+	$('.paint-white').click(function(){
+		generateGrid(parseInt($('.my-mosaic').css('width')), parseInt($('#square-range')[0].value));
+		paintGrid = paintGridWhite;
+		$('.square').mouseover(paintGrid);	
+	});
+	$('.paint-rand').click(function(){
+		generateGrid(parseInt($('.my-mosaic').css('width')), parseInt($('#square-range')[0].value));
+		paintGrid = paintGridRand;
+		$('.square').mouseover(paintGrid);	
+	});
+	$('.paint-additive').click(function(){
+		generateGrid(parseInt($('.my-mosaic').css('width')), parseInt($('#square-range')[0].value));
+		paintGrid = paintGridAdd;
+		$('.square').mouseover(paintGrid);	
+	});
 	
 	// setting default grid length 
 	var gridLength = 10;
@@ -48,7 +69,7 @@ var main= function(){
 	
 	$('.new-mosaic').click(function(){
 		generateGrid(parseInt($('.my-mosaic').css('width')), parseInt($('#square-range')[0].value));
-	$('.square').mouseover(paintGrid);	
+		$('.square').mouseover(paintGrid);	
 	});
 	
 	generateGrid(parseInt($('.my-mosaic').css('width')), gridLength);
