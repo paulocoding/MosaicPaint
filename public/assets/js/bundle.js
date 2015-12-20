@@ -14,10 +14,18 @@ var main= function(){
 		$('.square').css('height', squareWidth);
 	}
 	
-	// paints the square
-	var paintGrid = function(){
+	// paints the square white
+	var paintGridWhite = function(){
 		$(this).css('background-color', '#fff');
 	};
+	
+	// paints the square random
+	var paintGridRand = function(){
+		//randon number between 0 and 255
+		$(this).css('background-color', 'rgb('+Math.floor((Math.random() * 256))+', '+Math.floor((Math.random() * 256))+', '+Math.floor((Math.random() * 256))+')');
+	};
+	
+	var paintGrid = paintGridRand;
 	
 	// setting default grid length 
 	var gridLength = 10;
